@@ -20,7 +20,7 @@ class apiMask extends Controller
  *     description="無需參數即可使用",
  *     @OA\Response(
  *      response="200",
- *      description="An example resource"
+ *      description="請求成功"
  *     )
  * )
  */
@@ -44,7 +44,7 @@ class apiMask extends Controller
  *     @OA\Parameter(name="address", in="query",@OA\Schema(type="string"), required=true, description="請輸入查詢地址"),
  *     @OA\Response(
  *      response="200",
- *      description="An example resource"
+ *      description="請求成功"
  *     )
  * )
  */

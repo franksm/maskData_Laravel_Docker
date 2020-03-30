@@ -15,7 +15,7 @@
                 "operationId": "App\\Http\\Controllers\\apiMask::show_all",
                 "responses": {
                     "200": {
-                        "description": "An example resource"
+                        "description": "請求成功"
                     }
                 }
             }
@@ -41,7 +41,7 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "An example resource"
+                        "description": "請求成功"
                     }
                 }
             }
