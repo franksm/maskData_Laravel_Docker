@@ -43,3 +43,5 @@ sudo vim /etc/hosts
 /mask <br>
 /mask_address?address="搜尋地址" <br>
 ![](https://i.imgur.com/WSL3Hl8.png)
+/searchMask
+![](https://i.imgur.com/eOybyDx.png)
