@@ -41,5 +41,5 @@ sudo vim /etc/hosts
 
 ### 網頁呈現
 /mask <br>
-/mask_address?address="搜尋地址" <br
+/mask_address?address="搜尋地址" <br>
 ![](https://i.imgur.com/WSL3Hl8.png)
