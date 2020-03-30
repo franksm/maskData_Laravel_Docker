@@ -1,0 +1,44 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "My First API",
+        "version": "0.1"
+    },
+    "paths": {
+        "/api/mask": {
+            "get": {
+                "summary": "取得全台口罩數量資訊",
+                "description": "無需參數即可使用",
+                "operationId": "App\\Http\\Controllers\\apiMask::show_all",
+                "responses": {
+                    "200": {
+                        "description": "An example resource"
+                    }
+                }
+            }
+        },
+        "/api/mask_address": {
+            "get": {
+                "summary": "取得區域口罩剩餘數量",
+                "description": "需填寫想查詢的地址資訊",
+                "operationId": "App\\Http\\Controllers\\apiMask::show_section",
+                "parameters": [
+                    {
+                        "name": "address",
+                        "in": "query",
+                        "description": "請輸入查詢地址",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "An example resource"
+                    }
+                }
+            }
+        }
+    }
+}
