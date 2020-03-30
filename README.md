@@ -20,7 +20,7 @@ cp env.exemple .env
 
 4. 給予 Host 設置
 
-添加 laravel.test 來連線 <br> 
+添加 laravel.test 來連線 <br>
 ``` cmd
 sudo vim /etc/hosts
 
@@ -31,9 +31,15 @@ sudo vim /etc/hosts
 
 ### Swagger API RESTful Web
 /api/documentation <br>
+![](https://i.imgur.com/mNXCe2x.png)
+
 ### API
 /api/mask <br>
 /api/mask_address?address="搜尋地址"<br>
+![](https://i.imgur.com/4iguDG6.png)
+
+
 ### 網頁呈現
 /mask <br>
-/mask_address?address="搜尋地址" <br>
+/mask_address?address="搜尋地址" <br
+![](https://i.imgur.com/WSL3Hl8.png)
