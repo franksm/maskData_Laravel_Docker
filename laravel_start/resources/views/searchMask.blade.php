@@ -11,9 +11,17 @@
 				success: function(data){
                     var mask = document.getElementById("mask");
                     mask.style.display="block";
+                    $("#mask").empty();
+                    $("#mask").append(
+                        "<tr><th>店名</th>"+
+                        "<th>地址</th>"+
+                        "<th>成人口罩</th>"+
+                        "<th>孩童口罩</th>"+
+                        "<th>電話</th><tr>"
+                    );
                     $.each(data,function(index,item){                     
                         $("#mask").append(
-                            "<tr align='center' valign='middle'><td>" + item.name + "</td>" +
+                            "<tr id=tableData align='center' valign='middle'><td>" + item.name + "</td>" +
                             "<td>" + item.address + "</td>"+
                             "<td>" + item.adult_count + "</td>"+
                             "<td>" + item.child_count + "</td>"+
@@ -22,33 +30,49 @@
                     })     
 				},
 				error:function(xhr, ajaxOptions, thrownError){
-					alert("!!!");
+					alert("API錯誤");
                 }
 			});
         }
     </script>
     <script type="text/javascript">
         var maskSection = function(){
-            var area = document.getElementById("area").value;
+            var area = document.getElementById("area").value; 
+            if(area == ""){
+                area = "123";
+            }
             $.ajax({
                 url: "http://laravel.test/api/mask_address?address="+area,
                 method:"GET",
                     //成功處理
                 success: function(data){
-                    var mask = document.getElementById("mask");
-                    mask.style.display="block";
-                    $.each(data,function(index,item){
+                    if(data.length==0){
+                        alert("查無資料");
+                    }
+                    else{
+                        var mask = document.getElementById("mask");
+                        mask.style.display="block";
+                        $("#mask").empty();
                         $("#mask").append(
-                            "<tr align='center' valign='middle'><td>" + item.name + "</td>" +
-                            "<td>" + item.address + "</td>"+
-                            "<td>" + item.adult_count + "</td>"+
-                            "<td>" + item.child_count + "</td>"+
-                            "<td>" + item.phone + "</td></tr>"
+                            "<tr><th>店名</th>"+
+                            "<th>地址</th>"+
+                            "<th>成人口罩</th>"+
+                            "<th>孩童口罩</th>"+
+                            "<th>電話</th><tr>"
                         );
-                    })
+                        $.each(data,function(index,item){
+                            $("#mask").append(
+                                "<tr id=tableData align='center' valign='middle'><td>" + item.name + "</td>" +
+                                "<td>" + item.address + "</td>"+
+                                "<td>" + item.adult_count + "</td>"+
+                                "<td>" + item.child_count + "</td>"+
+                                "<td>" + item.phone + "</td></tr>"
+                            );
+                        })
+                    }
                 },
                 error:function(xhr, ajaxOptions, thrownError){
-                    alert("!!!");
+                    alert("API錯誤");
                 }
             });
         }
@@ -61,13 +85,6 @@
     <input type="button" value="查詢" onclick="maskSection();">
     <input type="button" value="全部" onclick="maskAll();">
     <table id="mask" style="display:none;">
-        <tr>
-            <th>店名</th>
-            <th>地址</th>
-            <th>成人口罩</th>
-            <th>孩童口罩</th>
-            <th>電話</th>
-        </tr>
     </table>
 </body>
 </html>
