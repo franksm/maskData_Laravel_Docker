@@ -4,6 +4,7 @@
     <script src="https://code.jquery.com/jquery-1.8.2.js"></script>
     <script type="text/javascript">
         var maskAll = function(){
+            $("#mask").empty();
             $.ajax({
 				url: "http://laravel.test/api/mask",
 				method:"GET",
@@ -11,7 +12,6 @@
 				success: function(data){
                     var mask = document.getElementById("mask");
                     mask.style.display="block";
-                    $("#mask").empty();
                     $("#mask").append(
                         "<tr><th>店名</th>"+
                         "<th>地址</th>"+
@@ -37,6 +37,7 @@
     </script>
     <script type="text/javascript">
         var maskSection = function(){
+            $("#mask").empty();
             var area = document.getElementById("area").value; 
             if(area == ""){
                 area = "123";
@@ -52,7 +53,6 @@
                     else{
                         var mask = document.getElementById("mask");
                         mask.style.display="block";
-                        $("#mask").empty();
                         $("#mask").append(
                             "<tr><th>店名</th>"+
                             "<th>地址</th>"+
