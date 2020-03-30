@@ -19,8 +19,8 @@ Route::get('/', function () {
 
 Route::get('hello-world','hello_world@show');
 
-Route::get('name/{id}', function($id){
-    return view('name',["id"=>$id]);
+Route::get('searchMask', function(){
+    return view('searchMask');
 });
 
 Route::get('date','cal@getWeek');
