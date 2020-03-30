@@ -15,6 +15,15 @@ cp env.exemple .env
 需要建置 mysql database => laravel <br>
 並且將 maskdata.csv 匯入 <br>
 
+4. 給予 Host 設置
+
+添加 laravel.test 來連線 <br> 
+``` cmd
+sudo vim /etc/hosts
+
+127.0.0.1 laravel.test
+```
+
 ## 功能
 
 ### Swagger API RESTful Web
