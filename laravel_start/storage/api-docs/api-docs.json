@@ -7,6 +7,9 @@
     "paths": {
         "/api/mask": {
             "get": {
+                "tags": [
+                    "maskSearch"
+                ],
                 "summary": "取得全台口罩數量資訊",
                 "description": "無需參數即可使用",
                 "operationId": "App\\Http\\Controllers\\apiMask::show_all",
@@ -19,6 +22,9 @@
         },
         "/api/mask_address": {
             "get": {
+                "tags": [
+                    "maskSearch"
+                ],
                 "summary": "取得區域口罩剩餘數量",
                 "description": "需填寫想查詢的地址資訊",
                 "operationId": "App\\Http\\Controllers\\apiMask::show_section",

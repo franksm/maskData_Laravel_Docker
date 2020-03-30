@@ -15,6 +15,7 @@ class apiMask extends Controller
 /**
  * @OA\Get(
  *     path="/api/mask",
+ *     tags={"maskSearch"},
  *     summary="取得全台口罩數量資訊",
  *     description="無需參數即可使用",
  *     @OA\Response(
@@ -37,6 +38,7 @@ class apiMask extends Controller
 /**
  * @OA\Get(
  *     path="/api/mask_address",
+ *     tags={"maskSearch"},
  *     summary="取得區域口罩剩餘數量",
  *     description="需填寫想查詢的地址資訊",
  *     @OA\Parameter(name="address", in="query",@OA\Schema(type="string"), required=true, description="請輸入查詢地址"),
