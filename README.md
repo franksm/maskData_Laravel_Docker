@@ -5,11 +5,20 @@
 1. 重建 Laravel
 
 需要重建 Laravel 專案 <br>
+
+```cmd
+cd laravel
+composer install
+npm install
+cp .env.example .env
+php artisan key:generate
+```
 >[可參考此網站](https://campus-xoops.tn.edu.tw/modules/tad_book3/page.php?tbdsn=1255) 
 
 2. 重建 Laradock
 
 ``` cmd
+cd laradock
 cp env.exemple .env
 ```
 
@@ -27,21 +36,28 @@ sudo vim /etc/hosts
 127.0.0.1 laravel.test
 ```
 
+## 啟動
+
+```cmd
+cd /laradock
+docker-compose up -d nginx mysql redis workspace
+```
+
 ## 功能
 
 ### Swagger API RESTful Web
-/api/documentation <br>
+127.0.0.1/api/documentation <br>
 ![](https://i.imgur.com/mNXCe2x.png)
 
 ### API
-/api/mask <br>
-/api/mask_address?address="搜尋地址"<br>
+127.0.0.1/api/mask <br>
+127.0.0.1/api/mask_address?address="搜尋地址"<br>
 ![](https://i.imgur.com/4iguDG6.png)
 
 
 ### 網頁呈現
-/mask <br>
-/mask_address?address="搜尋地址" <br>
+127.0.0.1/mask <br>
+127.0.0.1/mask_address?address="搜尋地址" <br>
 ![](https://i.imgur.com/WSL3Hl8.png)
-/searchMask
+127.0.0.1/searchMask
 ![](https://i.imgur.com/eOybyDx.png)
