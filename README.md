@@ -19,7 +19,7 @@ php artisan key:generate
 
 ``` cmd
 cd laradock
-cp env.exemple .env
+cp env-exemple .env
 ```
 
 3. 建立 SQL 資料
