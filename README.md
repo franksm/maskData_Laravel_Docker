@@ -7,7 +7,7 @@
 需要重建 Laravel 專案 <br>
 
 ```cmd
-cd laravel
+cd laravel_start
 composer install
 npm install
 cp .env.example .env
@@ -19,7 +19,7 @@ php artisan key:generate
 
 ``` cmd
 cd laradock
-cp env-exemple .env
+cp env-example .env
 ```
 
 3. 建立 SQL 資料
